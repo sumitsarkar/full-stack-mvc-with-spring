@@ -1,0 +1,26 @@
+{
+  "name": "full-stack-mvc-with-spring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:copy:templates": "mkdir -p dist/templates && mkdir -p build/resources/main/templates && cp -r webapp/templates/* dist/templates/ && cp -r webapp/templates/* build/resources/main/templates/",
+    "dev:watch:templates": "onchange 'webapp/templates/**/*' -- npm run dev:copy:templates",
+    "dev": "run-p dev:copy:templates dev:watch:templates"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.4",
+    "minify": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^8.1.14",
+    "tailwindcss": "^2.0.1",
+    "turbolinks": "^5.2.0",
+    "typescript": "^4.1.2"
+  }
+}

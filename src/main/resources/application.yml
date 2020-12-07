@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: mvc
+  web:
+    resources:
+      # This is where we'll store our CSS and JS bundles
+      static-locations: classpath:/static/
+      cache:
+        period: 30d
+        cachecontrol:
+          max-age: 365d
+
+handlebars:
+  prefix: classpath:/templates/
+  suffix: .hbs
+  enabled: true
+  cache: false
+  expose-session-attributes: true
+  expose-request-attributes: true
+  request-context-attribute: request
